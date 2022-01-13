@@ -21,4 +21,8 @@ replace year = 2018 if year==18
 
 rename v TEA
 
+gen ltea = log(TEA)
+
+gen id = _n
+
 save "C:\Users\Bernardo Bandeira\Documents\CEU\Courses\2ndYear\Empirical_Methods\assignment\Data\clean\CleanedTEAData.dta", replace

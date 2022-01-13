@@ -12,6 +12,8 @@ gen lgovconsump = log(govconsump)
 gen lcapform = log(grosscapitalformationcurrentusne)
 gen ldomsav = log(grossdomesticsavingscurrentusnyg)
 
+gen id = _n
+
 save "C:\Users\Bernardo Bandeira\Documents\CEU\Courses\2ndYear\Empirical_Methods\assignment\Data\raw\CleanedWDIData.dta", replace
 
 
