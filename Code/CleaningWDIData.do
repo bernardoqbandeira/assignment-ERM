@@ -7,14 +7,18 @@ drop gdppercapitagrowthannualnygdppca gdpgrowthannualnygdpmktpkdzg gdppercapitac
 destring generalgovernmentfinalconsumptio, generate(govconsump) force
 drop generalgovernmentfinalconsumptio
 
-gen lgdp = log(gdpcurrentusnygdpmktpcd)
-gen lgovconsump = log(govconsump)
-gen lcapform = log(grosscapitalformationcurrentusne)
-gen ldomsav = log(grossdomesticsavingscurrentusnyg)
+rename populationages1564totalsppop1564 popul
+rename gdpcurrentusnygdpmktpcd gdp
+rename grosscapitalformationcurrentusne capform
+rename grossdomesticsavingscurrentusnyg domsav
+
+gen lgdp = log(gdp/popul)
+gen lgovconsump = log(govconsump/popul)
+gen lcapform = log(capform/popul)
+gen ldomsav = log(domsav/popul)
 
 gen id = _n
 
-save "C:\Users\Bernardo Bandeira\Documents\CEU\Courses\2ndYear\Empirical_Methods\assignment\Data\raw\CleanedWDIData.dta", replace
-
+save "C:\Users\Bernardo Bandeira\Documents\CEU\Courses\2ndYear\Empirical_Methods\assignment\Data\clean\CleanedWDIData.dta", replace
 
 
