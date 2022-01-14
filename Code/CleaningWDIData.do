@@ -1,5 +1,10 @@
 *Cleaning the main data
-import delimited "C:\Users\Bernardo Bandeira\Documents\CEU\Courses\2ndYear\Empirical_Methods\assignment\Data\raw\AllContries_Data.csv", clear
+
+cd "C:\Users\Bernardo Bandeira\Documents\CEU\Courses\2ndYear\Empirical_Methods\assignment"
+
+*Remember to change for your path where the repository is.
+
+import delimited "Data\raw\AllCountries_Data.csv", clear
 
 sort countryname time
 drop in 1/5
@@ -19,6 +24,6 @@ gen ldomsav = log(domsav/popul)
 
 gen id = _n
 
-save "C:\Users\Bernardo Bandeira\Documents\CEU\Courses\2ndYear\Empirical_Methods\assignment\Data\clean\CleanedWDIData.dta", replace
+save "Data\clean\CleanedWDIData.dta", replace
 
 

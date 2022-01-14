@@ -1,6 +1,10 @@
 *Cleaning TEA Data
 
-import delimited "C:\Users\Bernardo Bandeira\Documents\CEU\Courses\2ndYear\Empirical_Methods\assignment\Data\raw\TEA RIGHT COUNTRIES.csv", clear
+cd "C:\Users\Bernardo Bandeira\Documents\CEU\Courses\2ndYear\Empirical_Methods\assignment"
+
+*Remember to change for your path where the repository is.
+
+import delimited "Data\raw\TEA RIGHT COUNTRIES.csv", clear
 
 drop indicatorid subindicatortype indicator
 reshape long v, i(countryname) j(year)
@@ -25,4 +29,4 @@ gen ltea = log(TEA)
 
 gen id = _n
 
-save "C:\Users\Bernardo Bandeira\Documents\CEU\Courses\2ndYear\Empirical_Methods\assignment\Data\clean\CleanedTEAData.dta", replace
+save "Data\clean\CleanedTEAData.dta", replace
