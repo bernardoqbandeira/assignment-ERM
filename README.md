@@ -20,17 +20,17 @@ The author(s) of the manuscript have legitimate access to and permission to use 
 
 | Data file | Source | License |
 |-----------|--------|----------|
-| `data/raw/AllCountries_Data.csv` | World Development Indicators (WDI) - World Bank | https://www.worldbank.org/en/about/legal/Permissions |
-| `data/raw/TEA RIGHT COUNTRIES.csv` | Global Entrepreneurship Monitor (GEM) - World Bank | https://www.worldbank.org/en/about/legal/Permissions|
+| `Data/raw/AllCountries_Data.csv` | World Development Indicators (WDI) - World Bank | https://www.worldbank.org/en/about/legal/Permissions |
+| `Data/raw/TEA RIGHT COUNTRIES.csv` | Global Entrepreneurship Monitor (GEM) - World Bank | https://www.worldbank.org/en/about/legal/Permissions|
 
 ## Description of programs/code
 
-The project uses GNU Make. To install dependencies, run `make install` from the root of the project folder. To do all data cleaning and analysis steps, run `make`.
+The project uses Make. To install dependencies, run `make install` from the root of the project folder. To do all data cleaning and analysis steps, run `make`.
 
-- The script `code/CleaningWDIData.do` cleans the WDI main database.
-- The script `code/CleaningTEAData.do` cleans the TEA database.
-- The script `code/MergingDatas.do` merges the two cleaned datasets.
-- The script `Analyzing Data and Exporting Output.do` run the analysis and extract the tables(output).
+- The script `Code/CleaningWDIData.do` cleans the WDI main database.
+- The script `Code/CleaningTEAData.do` cleans the TEA database.
+- The script `Code/MergingDatas.do` merges the two cleaned datasets.
+- The script `Code/Analyzing Data and Exporting Output.do` run the analysis and extract the tables(output).
 
 
 ## Context on the Project
